@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TrekFlow-Backend</Name>
+  <Repository>awdum/trekflow-backend</Repository>
+  <Registry>https://hub.docker.com/r/awdum/trekflow-backend</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/awdum/trekflow</Support>
+  <Project>https://github.com/awdum/trekflow</Project>
+  <Overview>
+    The backend API service for TrekFlow, a modern travel planning application.
+    MUST be installed before the Frontend.
+  </Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:3002]</WebUI>
+  <Icon>https://raw.githubusercontent.com/awdum/trekflow-unraid-templates/main/icon.png</Icon>
+  <Config Name="Port" Target="3002" Default="3002" Mode="tcp" Description="Backend API Port" Type="Port" Display="always" Required="true" Mask="false">3002</Config>
+  <Config Name="Data Dir" Target="/data" Default="/mnt/user/appdata/trekflow" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/trekflow</Config>
+</Container>
