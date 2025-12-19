@@ -1,0 +1,21 @@
+
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TrekFlow-Frontend</Name>
+  <Repository>awdum/trekflow-frontend</Repository>
+  <Registry>https://hub.docker.com/r/awdum/trekflow-frontend</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/awdum/trekflow</Support>
+  <Project>https://github.com/awdum/trekflow</Project>
+  <Overview>
+    The frontend UI for TrekFlow.
+    REQUIRES 'TrekFlow-Backend' to be running.
+    Please ensure you set the 'Backend URL' to the IP of your Unraid server + the backend port (default 3002).
+  </Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:4269]</WebUI>
+  <Icon>https://raw.githubusercontent.com/awdum/trekflow-unraid-templates/main/icon.png</Icon>
+  <Config Name="Web UI Port" Target="3000" Default="4269" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">4269</Config>
+  <Config Name="Backend URL" Target="NEXT_PUBLIC_API_URL" Default="http://YOUR_SERVER_IP:3002" Mode="" Description="Full URL to the Backend API (e.g. http://192.168.1.10:3002)" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.10:3002</Config>
+</Container>
